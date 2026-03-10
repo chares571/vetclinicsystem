@@ -10,7 +10,7 @@
                 Archive of appointments marked as completed.
             </p>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
             <x-ui.button :href="route('appointments.index')" variant="secondary">Back to Active Appointments</x-ui.button>
             @if(! $isClient)
                 <x-ui.button :href="route('appointments.create')">Add Appointment</x-ui.button>
@@ -25,7 +25,7 @@
                 description="Completed appointments will appear here once finalized."
             />
         @else
-            <div class="overflow-x-auto">
+            <div class="table-shell overflow-x-auto">
                 <table class="min-w-full divide-y divide-slate-200 text-sm">
                     <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                         <tr>

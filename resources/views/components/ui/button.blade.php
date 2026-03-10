@@ -6,7 +6,7 @@
         'secondary' => 'bg-pink-100 text-blue-700 hover:bg-pink-200 focus:ring-pink-300',
         'danger' => 'bg-pink-500 text-white hover:bg-pink-600 focus:ring-pink-400',
     ];
-    $classes = 'inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition hover-lift focus:outline-none focus:ring-2 focus:ring-offset-2 '.($variants[$variant] ?? $variants['primary']);
+    $classes = 'inline-flex items-center justify-center whitespace-nowrap rounded-xl px-3 py-2 text-xs font-semibold transition hover-lift focus:outline-none focus:ring-2 focus:ring-offset-2 sm:px-4 sm:text-sm '.($variants[$variant] ?? $variants['primary']);
 @endphp
 
 @if($href)

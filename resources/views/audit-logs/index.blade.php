@@ -48,7 +48,7 @@
                 <x-text-input id="search" name="search" class="mt-1 block w-full" :value="request('search')" placeholder="Description, event..." />
             </div>
 
-            <div class="md:col-span-5 flex items-center gap-2">
+            <div class="md:col-span-5 flex flex-wrap items-center gap-2">
                 <x-ui.button type="submit">Apply Filters</x-ui.button>
                 <x-ui.button :href="route('admin.audit-logs.index')" variant="secondary">Reset</x-ui.button>
             </div>
@@ -62,7 +62,7 @@
                 description="Critical updates and deletions will appear here."
             />
         @else
-            <div class="overflow-x-auto">
+            <div class="table-shell overflow-x-auto">
                 <table class="min-w-full divide-y divide-slate-200 text-sm">
                     <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                         <tr>

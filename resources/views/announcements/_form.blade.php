@@ -120,7 +120,7 @@
         </div>
     </div>
 
-    <div class="flex items-center gap-3">
+    <div class="flex flex-wrap items-center gap-3">
         <x-ui.button type="submit">Save Announcement</x-ui.button>
         <x-ui.button :href="route('announcements.index')" variant="secondary">Cancel</x-ui.button>
     </div>

@@ -202,7 +202,7 @@
                     description="Vaccination requests will appear here once submitted."
                 />
             @else
-                <div class="mt-4 overflow-x-auto">
+                <div class="mt-4 table-shell overflow-x-auto">
                     <table class="min-w-full divide-y divide-slate-200 text-sm">
                         <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                             <tr>
@@ -234,7 +234,7 @@
                                         </div>
                                     </td>
                                     <td class="px-4 py-3">
-                                        <div class="flex items-center justify-end gap-2">
+                                        <div class="flex flex-wrap items-center justify-end gap-2">
                                             <x-ui.button :href="route('appointments.edit', $appointment)" variant="secondary">Edit</x-ui.button>
                                             @if(in_array($appointment->status, ['pending', 'approved'], true))
                                                 <form method="POST" action="{{ route('appointments.cancel', $appointment) }}">
@@ -266,7 +266,7 @@
                     description="Grooming requests will appear here once submitted."
                 />
             @else
-                <div class="mt-4 overflow-x-auto">
+                <div class="mt-4 table-shell overflow-x-auto">
                     <table class="min-w-full divide-y divide-slate-200 text-sm">
                         <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                             <tr>
@@ -298,7 +298,7 @@
                                         </div>
                                     </td>
                                     <td class="px-4 py-3">
-                                        <div class="flex items-center justify-end gap-2">
+                                        <div class="flex flex-wrap items-center justify-end gap-2">
                                             <x-ui.button :href="route('appointments.edit', $appointment)" variant="secondary">Edit</x-ui.button>
                                             @if(in_array($appointment->status, ['pending', 'approved'], true))
                                                 <form method="POST" action="{{ route('appointments.cancel', $appointment) }}">

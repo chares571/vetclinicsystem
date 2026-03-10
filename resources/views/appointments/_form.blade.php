@@ -235,7 +235,7 @@
 
             <div>
                 <x-input-label for="is_emergency" :value="__('Emergency Flag')" />
-                <label for="is_emergency" class="mt-1 flex items-center gap-2 rounded-md border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-700">
+                <label for="is_emergency" class="mt-1 flex flex-wrap items-center gap-2 rounded-md border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-700">
                     <input
                         id="is_emergency"
                         name="is_emergency"
@@ -251,7 +251,7 @@
         @endif
     </div>
 
-    <div class="flex items-center gap-3">
+    <div class="flex flex-wrap items-center gap-3">
         <x-ui.button type="submit">Save</x-ui.button>
         <x-ui.button :href="route('appointments.index')" variant="secondary">Cancel</x-ui.button>
     </div>

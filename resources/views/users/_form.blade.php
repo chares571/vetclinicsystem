@@ -36,7 +36,7 @@
         </div>
 
         <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
-            <label class="inline-flex items-center gap-2 text-sm text-slate-700">
+            <label class="inline-flex flex-wrap items-center gap-2 text-sm text-slate-700">
                 <input
                     type="checkbox"
                     name="is_active"
@@ -49,7 +49,7 @@
         </div>
 
         <div class="rounded-xl border border-slate-200 bg-slate-50 p-3">
-            <label class="inline-flex items-center gap-2 text-sm text-slate-700">
+            <label class="inline-flex flex-wrap items-center gap-2 text-sm text-slate-700">
                 <input
                     type="checkbox"
                     name="must_change_password"
@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <div class="flex items-center gap-3">
+    <div class="flex flex-wrap items-center gap-3">
         <x-ui.button type="submit">Save</x-ui.button>
         <x-ui.button :href="route('admin.users.index')" variant="secondary">Cancel</x-ui.button>
     </div>

@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Vet Clinic System') }}</title>
+    <title>{{ config('app.name') === 'Laravel' ? 'NEW CREATION Animal Clinic and Diagnostic Center' : config('app.name') }}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="{{ asset('images/clinic-logo.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/clinic-logo.jpg') }}">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -124,7 +126,7 @@
 
         <div class="md:pl-72">
             <header class="sticky top-0 z-30 border-b border-blue-100 bg-white/85 backdrop-blur">
-                <div class="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+                <div class="flex min-h-16 flex-wrap items-center justify-between gap-2 px-4 py-2 md:h-16 md:flex-nowrap md:py-0 sm:px-6 lg:px-8">
                     <button
                         type="button"
                         class="inline-flex items-center rounded-lg border border-blue-100 bg-white px-3 py-2 text-sm font-semibold text-blue-700 shadow-sm md:hidden"
@@ -137,13 +139,13 @@
                         <p class="text-sm font-medium text-slate-500">Veterinary Clinic Management System</p>
                     </div>
 
-                    <div class="flex items-center gap-3">
-                        <a href="{{ route('profile.edit') }}" class="text-sm font-semibold text-slate-600 hover:text-blue-700">
+                    <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                        <a href="{{ route('profile.edit') }}" class="text-xs font-semibold text-slate-600 hover:text-blue-700 sm:text-sm">
                             Profile
                         </a>
                         <button
                             type="button"
-                            class="rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+                            class="rounded-lg bg-blue-600 px-2.5 py-2 text-xs font-semibold text-white hover:bg-blue-700 sm:px-3 sm:text-sm"
                             x-on:click="$dispatch('open-modal', 'confirm-logout')"
                         >
                             Logout

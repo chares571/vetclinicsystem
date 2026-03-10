@@ -16,7 +16,7 @@
                 <x-ui.button :href="route('pets.create')">Create Pet</x-ui.button>
             </x-ui.empty-state>
         @else
-            <div class="overflow-x-auto">
+            <div class="table-shell overflow-x-auto">
                 <table class="min-w-full divide-y divide-slate-200 text-sm">
                     <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                         <tr>
@@ -44,7 +44,7 @@
                                     {{ $pet->vaccinations_count }} vaccinations
                                 </td>
                                 <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-2">
+                                    <div class="flex flex-wrap items-center justify-end gap-2">
                                         <x-ui.button :href="route('pets.show', $pet)" variant="secondary">View</x-ui.button>
                                         <x-ui.button :href="route('pets.edit', $pet)" variant="secondary">Edit</x-ui.button>
                                         <form method="POST" action="{{ route('pets.destroy', $pet) }}">

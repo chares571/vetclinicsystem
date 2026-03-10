@@ -19,7 +19,7 @@
             <h1 class="text-2xl font-bold text-slate-900">Vaccination Details</h1>
             <p class="text-sm text-slate-500">Review pet and owner information, then notify the owner when follow-up is needed.</p>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
             <x-ui.button :href="route('vaccinations.edit', $vaccination)" variant="secondary">Edit</x-ui.button>
             <x-ui.button :href="route('vaccinations.index')" variant="secondary">Back to Vaccinations</x-ui.button>
         </div>

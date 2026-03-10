@@ -16,7 +16,7 @@
                 <x-ui.button :href="route('reports.create')">Create Report</x-ui.button>
             </x-ui.empty-state>
         @else
-            <div class="overflow-x-auto">
+            <div class="table-shell overflow-x-auto">
                 <table class="min-w-full divide-y divide-slate-200 text-sm">
                     <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                         <tr>
@@ -43,7 +43,7 @@
                                 </td>
                                 <td class="px-4 py-3">{{ $report->user?->name ?? 'N/A' }}</td>
                                 <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-2">
+                                    <div class="flex flex-wrap items-center justify-end gap-2">
                                         <x-ui.button :href="route('reports.show', $report)" variant="secondary">View</x-ui.button>
                                         <x-ui.button :href="route('reports.edit', $report)" variant="secondary">Edit</x-ui.button>
                                         <form method="POST" action="{{ route('reports.destroy', $report) }}">

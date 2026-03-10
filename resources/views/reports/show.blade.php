@@ -24,7 +24,7 @@
             <p class="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-slate-700">{{ $report->summary ?: 'No summary provided.' }}</p>
         </div>
 
-        <div class="mt-6 flex items-center gap-3">
+        <div class="mt-6 flex flex-wrap items-center gap-3">
             <x-ui.button :href="route('reports.edit', $report)">Edit Report</x-ui.button>
             <x-ui.button :href="route('reports.index')" variant="secondary">Back</x-ui.button>
         </div>

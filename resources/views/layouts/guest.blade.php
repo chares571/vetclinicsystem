@@ -5,11 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Vet Clinic System') }}</title>
+        <title>{{ config('app.name') === 'Laravel' ? 'NEW CREATION Animal Clinic and Diagnostic Center' : config('app.name') }}</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/jpeg" href="{{ asset('images/clinic-logo.jpg') }}">
+        <link rel="apple-touch-icon" href="{{ asset('images/clinic-logo.jpg') }}">
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -49,23 +51,23 @@
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-emerald-700/35"></div>
             @endif
 
-            <div class="relative z-10 flex min-h-screen items-center justify-center px-4 py-8 sm:px-6">
-                <div class="{{ $isLoginPage ? 'w-full max-w-lg rounded-2xl border border-white/30 bg-white/20 p-8 shadow-2xl backdrop-blur-lg animate-fade-in sm:p-10' : 'w-full max-w-md rounded-2xl bg-white/85 p-8 shadow-2xl backdrop-blur-md animate-fade-in sm:p-10' }}">
+            <div class="relative z-10 flex min-h-screen items-center justify-center px-4 py-5 sm:px-6 sm:py-8">
+                <div class="{{ $isLoginPage ? 'w-full max-w-lg rounded-2xl border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-lg animate-fade-in sm:p-10' : 'w-full max-w-md rounded-2xl bg-white/85 p-5 shadow-2xl backdrop-blur-md animate-fade-in sm:p-10' }}">
                     <a href="{{ route('home') }}" class="group mb-6 block text-center">
-                        <span class="mx-auto mb-4 flex h-28 w-28 items-center justify-center rounded-full bg-white shadow-xl">
+                        <span class="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-xl sm:h-28 sm:w-28">
                             <img
                                 src="{{ asset('images/clinic-logo.jpg') }}"
                                 alt="NEW CREATION Animal Clinic and Diagnostic Center logo"
-                                class="h-20 w-20 object-contain drop-shadow-md transition duration-300 group-hover:scale-105"
+                                class="h-16 w-16 object-contain drop-shadow-md transition duration-300 group-hover:scale-105 sm:h-20 sm:w-20"
                             >
                         </span>
-                        <p class="font-outfit text-3xl font-bold tracking-tight {{ $isLoginPage ? 'text-white' : 'text-blue-800' }}">
+                        <p class="font-outfit text-2xl font-bold tracking-tight sm:text-3xl {{ $isLoginPage ? 'text-white' : 'text-blue-800' }}">
                             NEW CREATION
                         </p>
-                        <p class="mt-1 text-xs font-bold uppercase tracking-[0.16em] {{ $isLoginPage ? 'text-blue-100' : 'text-blue-700' }}">
+                        <p class="mt-1 text-[11px] font-bold uppercase tracking-[0.14em] sm:text-xs sm:tracking-[0.16em] {{ $isLoginPage ? 'text-blue-100' : 'text-blue-700' }}">
                             Animal Clinic and Diagnostic Center
                         </p>
-                        <p class="mt-2 text-xs tracking-[0.08em] {{ $isLoginPage ? 'text-slate-100/90' : 'text-slate-600' }}">
+                        <p class="mt-2 text-[11px] tracking-[0.07em] sm:text-xs sm:tracking-[0.08em] {{ $isLoginPage ? 'text-slate-100/90' : 'text-slate-600' }}">
                             Compassionate Veterinary Care You Can Trust
                         </p>
                     </a>

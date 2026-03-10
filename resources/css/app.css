@@ -89,6 +89,39 @@
             radial-gradient(circle at 90% 10%, rgba(252, 231, 243, 0.78), transparent 36%),
             linear-gradient(180deg, #f8faff 0%, #f7f8fc 100%);
     }
+
+    .table-shell {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+    }
+
+    .table-shell table {
+        @apply w-full;
+    }
+
+    .table-shell th,
+    .table-shell td {
+        @apply align-top;
+    }
+
+    @media (max-width: 767px) {
+        .table-shell {
+            @apply -mx-2 px-2;
+        }
+
+        .table-shell table {
+            min-width: 40rem;
+        }
+
+        .table-shell th,
+        .table-shell td {
+            @apply px-3 py-2 text-xs;
+        }
+
+        .table-shell tbody td:last-child .flex {
+            @apply justify-start;
+        }
+    }
 }
 
 @layer utilities {

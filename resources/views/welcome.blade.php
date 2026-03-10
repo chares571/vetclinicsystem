@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PE+Infirmary Veterinary Clinic</title>
+    <title>NEW CREATION Animal Clinic and Diagnostic Center</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="{{ asset('images/clinic-logo.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/clinic-logo.jpg') }}">
 </head>
 
 <body class="h-screen overflow-hidden font-sans">
@@ -34,8 +36,8 @@
                     </p>
 
                     <h1 class="mt-4 font-outfit text-5xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-6xl">
-                        PE+Infirmary
-                        <span class="block text-blue-600">Veterinary Clinic</span>
+                        NEW CREATION
+                        <span class="block text-blue-600">Animal Clinic and Diagnostic Center</span>
                     </h1>
 
                     <p class="mt-4 max-w-xl text-base leading-relaxed text-slate-600 md:text-lg">
@@ -63,7 +65,7 @@
                         <button
                             id="about-us-button"
                             type="button"
-                            class="mt-1 inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-white/85 px-6 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-blue-700 shadow-lg shadow-blue-100/60 transition hover:scale-105 hover:bg-blue-50"
+                            class="mt-1 inline-flex flex-wrap items-center gap-2 rounded-xl border border-blue-200 bg-white/85 px-6 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-blue-700 shadow-lg shadow-blue-100/60 transition hover:scale-105 hover:bg-blue-50"
                         >
                             <svg class="h-4 w-4 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M18 10A8 8 0 114.9 3.8a1 1 0 11.7 1.9A6 6 0 1016 10a1 1 0 112 0zM9 7a1 1 0 012 0v3a1 1 0 11-2 0V7zm1 8a1.25 1.25 0 100-2.5A1.25 1.25 0 0010 15z" clip-rule="evenodd" />
@@ -147,7 +149,7 @@
                                 <button
                                     id="view-all-announcements-button"
                                     type="button"
-                                    class="group inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-blue-700 shadow-md shadow-blue-100/50 transition duration-200 hover:scale-105 hover:border-blue-300 hover:bg-blue-50"
+                                    class="group inline-flex flex-wrap items-center gap-2 rounded-xl border border-blue-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-blue-700 shadow-md shadow-blue-100/50 transition duration-200 hover:scale-105 hover:border-blue-300 hover:bg-blue-50"
                                 >
                                     View All Announcements
                                     <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
@@ -210,7 +212,7 @@
                 <div class="rounded-xl border border-blue-100 bg-white/80 p-4 shadow-sm">
                     <h3 class="text-sm font-bold uppercase tracking-[0.1em] text-blue-700">Clinic Introduction</h3>
                     <p class="mt-1">
-                        PE+Infirmary Veterinary Clinic - Animal Clinic and Diagnostic Center provides compassionate and
+                        NEW CREATION Animal Clinic and Diagnostic Center provides compassionate and
                         professional veterinary care for pets. Our clinic offers consultation, vaccination, hospitalization,
                         laboratory diagnostics, pharmacy services, and emergency care.
                     </p>

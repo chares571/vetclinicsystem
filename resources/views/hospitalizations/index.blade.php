@@ -26,7 +26,7 @@
                 description="Active hospitalization records will appear here."
             />
         @else
-            <div class="overflow-x-auto">
+            <div class="table-shell overflow-x-auto">
                 <table class="min-w-full divide-y divide-slate-200 text-sm">
                     <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                         <tr>
@@ -45,7 +45,7 @@
                                 <td class="px-4 py-3">{{ optional($hospitalization->admitted_date)->format('M d, Y') }}</td>
                                 <td class="px-4 py-3">{{ $hospitalization->medication_schedule ?: 'N/A' }}</td>
                                 <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-2">
+                                    <div class="flex flex-wrap items-center justify-end gap-2">
                                         <x-ui.button :href="route('hospitalizations.show', $hospitalization)" variant="secondary">View</x-ui.button>
                                         <x-ui.button :href="route('hospitalizations.edit', $hospitalization)" variant="secondary">Edit</x-ui.button>
                                     </div>
@@ -66,7 +66,7 @@
                 description="Completed confinement records will appear here."
             />
         @else
-            <div class="overflow-x-auto">
+            <div class="table-shell overflow-x-auto">
                 <table class="min-w-full divide-y divide-slate-200 text-sm">
                     <thead class="bg-slate-50 text-left text-xs uppercase tracking-[0.15em] text-slate-500">
                         <tr>
@@ -85,7 +85,7 @@
                                 <td class="px-4 py-3">{{ optional($hospitalization->discharge_date)->format('M d, Y') ?: 'N/A' }}</td>
                                 <td class="px-4 py-3">{{ $hospitalization->discharge_summary ?: 'N/A' }}</td>
                                 <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-2">
+                                    <div class="flex flex-wrap items-center justify-end gap-2">
                                         <x-ui.button :href="route('hospitalizations.show', $hospitalization)" variant="secondary">View</x-ui.button>
                                         <form method="POST" action="{{ route('hospitalizations.destroy', $hospitalization) }}">
                                             @csrf

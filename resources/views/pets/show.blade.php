@@ -8,7 +8,7 @@
                 Owner: {{ $pet->owner_name }}
             </p>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
             <x-ui.button :href="route('pets.edit', $pet)" variant="secondary">Edit</x-ui.button>
             <x-ui.button :href="route('pets.index')" variant="secondary">Back</x-ui.button>
         </div>

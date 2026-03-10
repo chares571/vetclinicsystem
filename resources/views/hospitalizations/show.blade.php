@@ -9,7 +9,7 @@
                 </span>
             </p>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
             <x-ui.button :href="route('hospitalizations.edit', $hospitalization)" variant="secondary">Edit</x-ui.button>
             <x-ui.button :href="route('hospitalizations.index')" variant="secondary">Back</x-ui.button>
         </div>
