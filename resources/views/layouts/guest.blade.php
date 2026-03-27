@@ -15,8 +15,8 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        @php($isLoginPage = request()->routeIs('login'))
+    <body class="font-sans antialiased overflow-x-hidden">
+        @php($isAuthPage = request()->routeIs('login') || request()->routeIs('register'))
 
         <main class="relative min-h-screen overflow-hidden">
             <img
@@ -25,7 +25,7 @@
                 class="absolute inset-0 h-full w-full object-cover"
             >
 
-            @if($isLoginPage)
+            @if($isAuthPage)
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-700/70 via-teal-500/60 to-pink-500/65 animate-gradient-slow"></div>
                 <div class="absolute inset-0 bg-black/55"></div>
 
@@ -52,7 +52,7 @@
             @endif
 
             <div class="relative z-10 flex min-h-screen items-center justify-center px-4 py-5 sm:px-6 sm:py-8">
-                <div class="{{ $isLoginPage ? 'w-full max-w-lg rounded-2xl border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-lg animate-fade-in sm:p-10' : 'w-full max-w-md rounded-2xl bg-white/85 p-5 shadow-2xl backdrop-blur-md animate-fade-in sm:p-10' }}">
+                <div class="{{ $isAuthPage ? 'w-full max-w-full sm:max-w-6xl rounded-2xl border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-lg animate-fade-in sm:p-10' : 'w-full max-w-md rounded-2xl bg-white/85 p-5 shadow-2xl backdrop-blur-md animate-fade-in sm:p-10' }}">
                     <a href="{{ route('home') }}" class="group mb-6 block text-center">
                         <span class="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-xl sm:h-28 sm:w-28">
                             <img
@@ -61,13 +61,13 @@
                                 class="h-16 w-16 object-contain drop-shadow-md transition duration-300 group-hover:scale-105 sm:h-20 sm:w-20"
                             >
                         </span>
-                        <p class="font-outfit text-2xl font-bold tracking-tight sm:text-3xl {{ $isLoginPage ? 'text-white' : 'text-blue-800' }}">
+                        <p class="font-outfit text-2xl font-bold tracking-tight sm:text-3xl {{ $isAuthPage ? 'text-white' : 'text-blue-800' }}">
                             NEW CREATION
                         </p>
-                        <p class="mt-1 text-[11px] font-bold uppercase tracking-[0.14em] sm:text-xs sm:tracking-[0.16em] {{ $isLoginPage ? 'text-blue-100' : 'text-blue-700' }}">
+                        <p class="mt-1 text-[11px] font-bold uppercase tracking-[0.14em] sm:text-xs sm:tracking-[0.16em] {{ $isAuthPage ? 'text-blue-100' : 'text-blue-700' }}">
                             Animal Clinic and Diagnostic Center
                         </p>
-                        <p class="mt-2 text-[11px] tracking-[0.07em] sm:text-xs sm:tracking-[0.08em] {{ $isLoginPage ? 'text-slate-100/90' : 'text-slate-600' }}">
+                        <p class="mt-2 text-[11px] tracking-[0.07em] sm:text-xs sm:tracking-[0.08em] {{ $isAuthPage ? 'text-slate-100/90' : 'text-slate-600' }}">
                             Compassionate Veterinary Care You Can Trust
                         </p>
                     </a>

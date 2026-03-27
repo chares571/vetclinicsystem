@@ -1,8 +1,8 @@
 <x-app-layout>
     <section class="rounded-3xl bg-gradient-to-r from-blue-700 via-blue-600 to-pink-500 p-6 text-white shadow-xl animate-rise">
-        <p class="text-xs uppercase tracking-[0.25em] text-blue-100">Admin Dashboard</p>
-        <h1 class="mt-2 text-3xl font-extrabold">System Analytics</h1>
-        <p class="mt-2 text-sm text-blue-100">Global view across users, patients, appointments, and vaccines.</p>
+        <p class="text-xs uppercase tracking-[0.25em] text-white">Admin Dashboard</p>
+        <h1 class="mt-2 text-3xl font-extrabold text-white">System Analytics</h1>
+        <p class="mt-2 text-sm text-white">Global view across users, patients, appointments, and vaccines.</p>
     </section>
 
     <section class="space-y-3">

@@ -1,7 +1,7 @@
 <x-app-layout>
     <section class="rounded-3xl bg-gradient-to-r from-blue-700 via-blue-500 to-pink-400 p-6 text-white shadow-xl animate-rise">
         <p class="text-xs uppercase tracking-[0.25em] text-blue-100">Veterinary Staff Dashboard</p>
-        <h1 class="mt-2 text-3xl font-extrabold">Clinic Operations</h1>
+        <h1 class="mt-2 text-3xl font-extrabold text-white">Clinic Operations</h1>
         <p class="mt-2 text-sm text-blue-100">Track your assigned patients, schedules, and vaccination timelines.</p>
     </section>
 

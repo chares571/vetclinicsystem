@@ -40,9 +40,7 @@
             :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
         >
             <div class="flex items-center gap-3">
-                <div class="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-blue-600 via-blue-500 to-pink-400 text-sm font-bold text-white shadow-md">
-                    VC
-                </div>
+                <img src="{{ asset('images/clinic-logo.jpg') }}" alt="Clinic Logo" class="h-11 w-11 rounded-xl object-cover shadow-md">
                 <div>
                     <p class="text-xs uppercase tracking-[0.2em] text-blue-500">Portal</p>
                     <p class="text-base font-bold text-slate-900">Vet Clinic</p>

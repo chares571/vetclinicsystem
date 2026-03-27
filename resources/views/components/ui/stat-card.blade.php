@@ -87,5 +87,8 @@
         @endif
     </div>
 
-    <p class="mt-3 {{ $critical ? 'text-3xl font-extrabold' : 'text-3xl font-bold' }}">{{ $value }}</p>
+    @php
+        $valueColor = $isSolid ? 'text-white' : 'text-slate-900';
+    @endphp
+    <p class="mt-3 {{ $critical ? 'text-3xl font-extrabold' : 'text-3xl font-bold' }} {{ $valueColor }}">{{ $value }}</p>
 </article>

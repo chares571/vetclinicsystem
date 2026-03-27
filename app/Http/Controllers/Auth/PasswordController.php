@@ -25,6 +25,9 @@ class PasswordController extends Controller
             'must_change_password' => false,
         ]);
 
-        return back()->with('status', 'password-updated');
+        return back()->with([
+            'status' => 'password-updated',
+            'success' => __('Your password has been successfully updated.'),
+        ]);
     }
 }

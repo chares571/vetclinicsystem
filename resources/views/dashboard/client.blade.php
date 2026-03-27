@@ -1,8 +1,8 @@
 <x-app-layout>
     <section class="rounded-3xl bg-gradient-to-r from-blue-700 via-blue-500 to-pink-400 p-6 text-white shadow-xl animate-rise">
         <p class="text-xs uppercase tracking-[0.25em] text-blue-100">Client Dashboard</p>
-        <h1 class="mt-2 text-3xl font-extrabold">My Pet Care Portal</h1>
-        <p class="mt-2 text-sm text-blue-100">Monitor pets, appointments, and upcoming vaccination reminders.</p>
+        <h1 class="mt-2 text-3xl font-extrabold text-white">My Pet Care Portal</h1>
+        <p class="mt-2 text-sm text-blue-50">Monitor pets, appointments, and upcoming vaccination reminders.</p>
     </section>
 
     <section class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
